@@ -23,7 +23,7 @@ export default function ThankYouPage() {
             <FaPhoneVolume className="w-4 h-4 text-blue-700" />
           </div>
           <p className="text-xs font-bold text-slate-700 leading-tight">
-            Keep your phone nearby—our educational advisor will be in touch shortly to finalise your onboarding.
+            Keep your phone nearby—наш educational advisor will be in touch shortly to finalise your onboarding.
           </p>
         </div>
 
