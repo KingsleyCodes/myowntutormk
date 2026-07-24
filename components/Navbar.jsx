@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Button from "./ui/Button"; // Or appropriate relative path based on where Navbar.jsx lives
+import Button from "./ui/Button";
 
 export default function Navbar({ onOpenModal }) {
   const [scrolled, setScrolled] = useState(false);
@@ -26,20 +26,38 @@ export default function Navbar({ onOpenModal }) {
       }`}
     >
       <div className="max-w-7xl mx-auto flex h-16 md:h-20 items-center justify-between px-5 md:px-8">
-        {/* Logo */}
+        {/* Logo with Image Tag */}
         <a href="/" className="flex items-center gap-2 group">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold text-sm shadow-md">
-            M
+          {/* Mobile Logo (Visible only on small screens, hidden on md and up) */}
+          <div className="relative w-20 h-12 shrink-0 block md:hidden">
+            <Image
+              src="/logo.png"
+              alt=""
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
 
-          <span className="text-lg md:text-xl font-bold tracking-tight text-slate-900">
-            My Own Tutor
-          </span>
+          {/* Desktop Logo (Visible only on md screens and up, hidden on mobile) */}
+          <div className="relative w-20 h-20 shrink-0 hidden md:block">
+            <Image
+              src="/logo.png"
+              alt=""
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </a>
 
-        {/* Universal Button Component */}
+        {/* Universal Button Component with compact mobile padding */}
         <div>
-          <Button variant="accent" onClick={onOpenModal}>
+          <Button 
+            variant="accent" 
+            onClick={onOpenModal} 
+            className="!px-3.5 !py-2 sm:!px-6 sm:!py-3 text-xs sm:text-sm font-bold shadow-md"
+          >
             Book Your Child's Place
           </Button>
         </div>
