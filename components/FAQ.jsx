@@ -40,7 +40,7 @@ export default function FAQ() {
         <SectionHeading 
           eyebrow="Got Questions?"
           title="Frequently Asked Questions"
-          subtitle="Everything you need to know about the My Own Tutor Summer Tuition Programme."
+          subtitle="Everything you need to know about the My Own Tutor Milton Keynes Summer Tuition Programme."
         />
         
         <div className="max-w-3xl mx-auto space-y-3">

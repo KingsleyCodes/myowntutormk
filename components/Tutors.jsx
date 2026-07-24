@@ -5,25 +5,28 @@ import { FaGraduationCap, FaAward, FaBookBookmark } from 'react-icons/fa6';
 export default function Tutors() {
   const tutors = [
     {
-      name: "Dr. James Harrison",
-      role: "Lead Mathematics Tutor",
-      bio: "Passionate mathematician with over 10 years of experience helping students master complex numerical concepts with ease.",
-      qualifications: "PhD in Mathematics, University of Oxford",
-      subjectFocus: "Advanced Arithmetic, Algebra & Problem Solving"
+      role: "Expert Mathematics Tutors",
+      bio: "Our mathematics educators specialize in transforming foundational arithmetic and complex problem-solving into complete academic confidence.",
+      qualifications: "DBS Checked & Top-Tier University Graduates",
+      subjectFocus: "Number fluency, algebra, geometry & exam techniques"
     },
     {
-      name: "Emma Richardson",
-      role: "Lead English Specialist",
-      bio: "Dedicated educator specialising in creative writing development, grammar mastery, and inspiring a love for literature.",
-      qualifications: "MA in English Literature, University of Cambridge",
-      subjectFocus: "Creative Writing, Comprehension & Literature"
+      role: "Expert English Specialists",
+      bio: "Dedicated professionals focused on elevating reading comprehension, creative writing flair, grammar precision, and analytical essay skills.",
+      qualifications: "DBS Checked & Experienced English Educators",
+      subjectFocus: "Creative writing, comprehension, grammar & literature"
     },
     {
-      name: "Marcus Chen",
-      role: "Lead Science Educator",
-      bio: "Dynamic science teacher committed to making physics, chemistry, and biology engaging and accessible for all students.",
-      qualifications: "BSc Physics & PGCE Secondary Education",
-      subjectFocus: "Biology, Chemistry, Physics & Practical Theory"
+      role: "Expert Science Educators",
+      bio: "Dynamic science specialists committed to making Biology, Chemistry, and Physics engaging, clear, and fully accessible for every student.",
+      qualifications: "DBS Checked & Specialized Science Instructors",
+      subjectFocus: "Scientific inquiry, core concepts & practical theory"
+    },
+    {
+      role: "Expert Computing Specialists",
+      bio: "Forward-thinking technology mentors focused on developing digital literacy, computational thinking, and core programming foundations.",
+      qualifications: "DBS Checked & Tech Industry Professionals",
+      subjectFocus: "Algorithms, logic, coding fundamentals & safety"
     }
   ];
 
@@ -34,11 +37,11 @@ export default function Tutors() {
           <SectionHeading 
             eyebrow="Expert Educators"
             title="Meet Our Expert Tutors"
-            subtitle="Learn from qualified, experienced professionals dedicated to unlocking your child's full potential."
+            subtitle="Learn from qualified, experienced professionals dedicated to unlocking your child's full potential across our 4 core subjects."
             className="text-white"
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {tutors.map((tutor, index) => (
               <div 
                 key={index}
@@ -49,12 +52,9 @@ export default function Tutors() {
                     <FaGraduationCap className="w-6 h-6 text-[#FBBF24]" />
                   </div>
                   
-                  <h3 className="text-xl font-black text-white mb-1 tracking-tight">
-                    {tutor.name}
-                  </h3>
-                  <p className="text-xs font-bold text-[#FBBF24] uppercase tracking-wide mb-4">
+                  <h3 className="text-xl font-black text-white mb-4 tracking-tight">
                     {tutor.role}
-                  </p>
+                  </h3>
                   
                   <p className="text-slate-300 font-semibold text-sm leading-relaxed mb-6">
                     {tutor.bio}

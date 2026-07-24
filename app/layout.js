@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'My Own Tutor | 6-Week Online Summer Tuition Programme',
+  title: 'My Own Tutor Milton Keynes| 6-Week Online Summer Tuition Programme',
   description: 'Give your child the academic edge with expert-led online tuition.',
 };
 

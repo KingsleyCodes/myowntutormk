@@ -32,7 +32,7 @@ export default function HowItWorks() {
           <SectionHeading 
             eyebrow="Simple Process"
             title="How It Works"
-            subtitle="Getting started with My Own Tutor is straightforward and hassle-free."
+            subtitle="Getting started with My Own Tutor Milton Keynes is straightforward and hassle-free."
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">

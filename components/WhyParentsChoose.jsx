@@ -30,7 +30,7 @@ export default function WhyParentsChoose() {
     <section className="py-20 lg:py-24 max-w-7xl mx-auto px-5 md:px-8">
       <div className="bg-white p-6 sm:p-10 lg:p-14 rounded-none shadow-2xl border border-slate-200/80">
         <SectionHeading 
-          eyebrow="The My Own Tutor Difference"
+          eyebrow="The My Own Tutor Milton Keynes Difference"
           title="Why Parents Choose Us"
           subtitle="We combine educational excellence with a supportive, friendly approach that puts children first."
         />

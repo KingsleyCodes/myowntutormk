@@ -1,23 +1,28 @@
 import React from 'react';
 import SectionHeading from './ui/SectionHeading';
-import { FaQuoteLeft, FaStar } from 'react-icons/fa6';
+import Image from 'next/image';
 
 export default function Testimonials() {
-  const testimonials = [
+  const testimonialImages = [
     {
-      quote: "My daughter went from dreading maths to actually enjoying it. The summer programme gave her the exact boost she needed before starting GCSE year.",
-      author: "Sarah Jenkins",
-      role: "Parent of Year 10 Student"
+      src: "/t2.png",
+      alt: "Parent Testimonial 1",
+      aspect: "aspect-[10/3]"
     },
     {
-      quote: "Professional, well-structured, and incredibly engaging. The tutors know exactly how to keep children motivated during the summer holidays.",
-      author: "David Thorne",
-      role: "Parent of Year 8 Student"
+      src: "/t1.png",
+      alt: "Parent Testimonial 2",
+      aspect: "aspect-[10/3]"
     },
     {
-      quote: "The progress reports were detailed and reassuring. My son started the autumn term feeling confident and ahead of his classmates.",
-      author: "Aisha Patel",
-      role: "Parent of Year 6 Student"
+      src: "/t4.png",
+      alt: "Parent Testimonial 3",
+      aspect: "aspect-[13/4]"
+    },
+    {
+      src: "/t3.png",
+      alt: "Parent Testimonial 4",
+      aspect: "aspect-[10/3]"
     }
   ];
 
@@ -30,26 +35,20 @@ export default function Testimonials() {
           subtitle="Read genuine experiences from families who have transformed their children's learning journey with us."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {testimonials.map((item, index) => (
+        <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+          {testimonialImages.map((item, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 sm:p-8 rounded-none shadow-xl border border-slate-200/80 flex flex-col justify-between transition-all duration-300 hover:border-blue-500/50"
+              className="bg-white p-3 sm:p-4 rounded-none shadow-xl border border-slate-200/80 transition-all duration-300 hover:border-blue-500/50 relative w-full overflow-hidden flex justify-center"
             >
-              <div>
-                <div className="flex items-center gap-1 text-[#FBBF24] mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
-                <FaQuoteLeft className="w-8 h-8 text-[#FBBF24]/30 mb-3" />
-                <p className="text-slate-600 font-semibold text-sm leading-relaxed mb-6">
-                  "{item.quote}"
-                </p>
-              </div>
-              <div className="pt-4 border-t border-slate-100">
-                <p className="font-black text-slate-900 text-base">{item.author}</p>
-                <p className="text-xs font-semibold text-blue-700 mt-0.5">{item.role}</p>
+              <div className={`relative w-full ${item.aspect} bg-slate-100 max-w-[960px]`}>
+                <Image 
+                  src={item.src} 
+                  alt={item.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 960px"
+                />
               </div>
             </div>
           ))}

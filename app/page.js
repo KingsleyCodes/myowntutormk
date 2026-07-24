@@ -17,6 +17,7 @@ import FAQ from '@/components/FAQ';
 import StatCard from '@/components/ui/StatCard';
 import FeatureCard from '@/components/ui/FeatureCard';
 import TrustBar from '@/components/TrustBar';
+import GuaranteePromise from '@/components/GuaranteePromise';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,6 +32,7 @@ export default function Home() {
         <Subjects onOpenModal={() => setIsModalOpen(true)} />
         <WhatsIncluded />
         <HowItWorks />
+        <GuaranteePromise />
         <Testimonials />
         <WhyParentsChoose />
         <Tutors />
