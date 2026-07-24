@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaCheckCircle, FaPhoneVolume } from 'react-icons/fa6';
+import { FaCheckCircle, FaPhoneVolume } from 'react-icons/fa';
 
 export default function ThankYouPage() {
   return (
@@ -27,7 +27,12 @@ export default function ThankYouPage() {
           </p>
         </div>
 
-    
+        <Link 
+          href="/" 
+          className="inline-block w-full bg-[#FBBF24] hover:bg-[#f5b31f] text-slate-900 py-4 font-black text-sm shadow-md transition-all rounded-none"
+        >
+          Return to Home
+        </Link>
       </div>
     </main>
   );
