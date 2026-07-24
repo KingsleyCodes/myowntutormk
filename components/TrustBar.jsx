@@ -3,7 +3,7 @@ import { Award, Users, BookOpen, Star } from 'lucide-react';
 
 export default function TrustBar() {
   const stats = [
-    { icon: Users, value: "10,000+", label: "Students Taught" },
+    { icon: Users, value: "1,000+", label: "Students Taught" },
     { icon: Star, value: "4.9 / 5", label: "Parent Satisfaction" },
     { icon: Award, value: "100%", label: "UK Qualified Tutors" },
     { icon: BookOpen, value: "6 Weeks", label: "Intensive Growth" }

@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export async function POST(request) {
   try {
     const data = await request.json();
-    const { parentName, email, phone, studentName, academicYear, subjects, totalPrice } = data;
+    const { parentName, email, phone, academicYear, subjects, hours, totalPrice } = data;
 
     // Optional: Get list ID from environment variables and convert to a number if present
     const listId = process.env.BREVO_LIST_ID ? Number(process.env.BREVO_LIST_ID) : null;
@@ -13,9 +13,10 @@ export async function POST(request) {
       attributes: {
         FIRSTNAME: parentName || '',
         PHONE: phone || '',
-        STUDENT_NAME: studentName || '',
+        PARENT_NAME: parentName || '',
         ACADEMIC_YEAR: academicYear || '',
         SUBJECTS: Array.isArray(subjects) ? subjects.join(', ') : '',
+        HOURS: hours ? String(hours) : '',
         TOTAL_PRICE: totalPrice || 0,
       },
       updateEnabled: true,

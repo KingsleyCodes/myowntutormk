@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Button from "./ui/Button";
-import { Calendar, Monitor, BookOpen, PoundSterling } from "lucide-react";
+import { Calendar, Monitor, BookOpen, UserCheck } from "lucide-react";
 
 export default function Hero({ onOpenModal }) {
   const [timeLeft, setTimeLeft] = useState({
@@ -50,18 +51,18 @@ export default function Hero({ onOpenModal }) {
   }, []);
 
   return (
-    <section className="hero min-h-screen flex items-center pt-20 bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900 overflow-hidden relative">
+    <section className="hero py-12 lg:py-16 flex items-center pt-24 lg:pt-28 bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900 overflow-hidden relative">
       <div className="container mx-auto px-5 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {/* Headline with Animated Brush Stroke Underline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight text-white max-w-xl">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black leading-tight tracking-tight text-white max-w-xl">
               <span className="relative inline-block">
-                Give Your Child
+                One-to-One
                 {/* Animated Brush Stroke SVG Underline */}
                 <svg
-                  className="absolute -bottom-1 left-0 w-full h-5"
+                  className="absolute -bottom-1 left-0 w-full h-4"
                   viewBox="0 0 300 20"
                   preserveAspectRatio="none"
                   style={{ overflow: 'visible' }}
@@ -132,39 +133,39 @@ export default function Hero({ onOpenModal }) {
                   />
                 </svg>
               </span>{" "}
-              a Head Start Before School
+              Online Tutoring for Your Child
             </h1>
 
-            <p className="text-lg sm:text-xl text-blue-100 font-medium leading-relaxed">
-              Our 6-week online Summer Tuition Programme helps students strengthen their understanding, build confidence, and stay academically ahead before school resumes.
+            <p className="text-sm sm:text-base text-blue-100 font-medium leading-relaxed">
+              Unlike crowded group classes, our 6-week summer programme delivers dedicated 1-to-1 online tuition tailored entirely to your child's pace, learning gaps, and academic goals.
             </p>
 
             {/* Key Information Cards - Sharp Edges */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              <div className="bg-white/10 backdrop-blur-sm rounded-none p-3 border border-white/15 shadow-sm">
-                <Calendar className="w-5 h-5 text-[#FBBF24] mb-1" />
-                <p className="text-xs text-blue-200 font-medium">Dates</p>
-                <p className="text-sm text-white font-semibold">22nd Jul – 31st Aug</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+              <div className="bg-white/10 backdrop-blur-sm rounded-none p-2.5 border border-white/15 shadow-sm">
+                <Calendar className="w-4 h-4 text-[#FBBF24] mb-1" />
+                <p className="text-[10px] text-blue-200 font-medium uppercase tracking-wider">Dates</p>
+                <p className="text-xs text-white font-semibold">22nd Jul – 31st Aug</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-none p-3 border border-white/15 shadow-sm">
-                <Monitor className="w-5 h-5 text-[#FFF] mb-1" />
-                <p className="text-xs text-blue-200 font-medium">Delivery</p>
-                <p className="text-sm text-white font-semibold">100% Online</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-none p-2.5 border border-white/15 shadow-sm">
+                <Monitor className="w-4 h-4 text-[#FFF] mb-1" />
+                <p className="text-[10px] text-blue-200 font-medium uppercase tracking-wider">Delivery</p>
+                <p className="text-xs text-white font-semibold">100% Online</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-none p-3 border border-white/15 shadow-sm">
-                <BookOpen className="w-5 h-5 text-[#FBBF24] mb-1" />
-                <p className="text-xs text-blue-200 font-medium">Subjects</p>
-                <p className="text-sm text-white font-semibold leading-tight">Maths • English • Lit • Science</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-none p-2.5 border border-white/15 shadow-sm">
+                <BookOpen className="w-4 h-4 text-[#FBBF24] mb-1" />
+                <p className="text-[10px] text-blue-200 font-medium uppercase tracking-wider">Subjects</p>
+                <p className="text-xs text-white font-semibold leading-tight">Maths • English • Science</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-none p-3 border border-white/15 shadow-sm">
-                <PoundSterling className="w-5 h-5 text-[#FBBF24] mb-1" />
-                <p className="text-xs text-blue-200 font-medium">Price</p>
-                <p className="text-sm text-white font-semibold">£25 per session</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-none p-2.5 border border-white/15 shadow-sm">
+                <UserCheck className="w-4 h-4 text-[#FBBF24] mb-1" />
+                <p className="text-[10px] text-blue-200 font-medium uppercase tracking-wider">Format</p>
+                <p className="text-xs text-white font-semibold">1-to-1 Attention</p>
               </div>
             </div>
 
             {/* CTA using the exact imported Button component with sharp edges */}
-            <div className="hero-cta-wrap pt-2">
+            <div className="hero-cta-wrap pt-1">
               <Button variant="accent" onClick={onOpenModal}>
                 Book Your Child's Place{" "}
                 <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 ml-2">
@@ -176,43 +177,20 @@ export default function Hero({ onOpenModal }) {
 
           {/* Right Content - Teacher Image / Card */}
           <div className="hero-teacher relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[520px]">
+            <div className="relative w-full max-w-[440px]">
               {/* Main Container - Sharp Edges */}
-              <div className="aspect-[4/3] rounded-none bg-white/10 backdrop-blur-sm border border-white/20 shadow-2xl overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 rounded-none bg-[#FBBF24]/20 border border-[#FBBF24]/30 mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-5xl">🎓</span>
-                    </div>
-                    <p className="text-white font-bold">Expert UK Teachers</p>
-                    <p className="text-blue-200 text-sm font-medium">Qualified & Experienced</p>
-                  </div>
-                </div>
+              <div className="aspect-[16/10] rounded-none bg-white/10 backdrop-blur-sm border border-white/20 shadow-2xl overflow-hidden relative flex items-center justify-center">
+                <Image
+                  src="/hero.webp"
+                  alt="Expert UK Tutor Teaching Online"
+                  fill
+                  className="object-cover"
+                  priority
+                />
 
-                {/* Price Badge - Sharp Edges */}
-                <div className="hero-price-badge absolute -top-3 -right-3 bg-white rounded-none px-4 py-3 shadow-lg border border-white/80 text-center min-w-[100px]">
-                  <span className="block text-2xl font-black text-blue-700">
-                    £25
-                  </span>
-                  <span className="text-xs text-slate-600 font-semibold">
-                    per session
-                  </span>
-                </div>
+                
+                
 
-                {/* Floating feature badges - Sharp Edges */}
-                <div className="absolute -bottom-4 -left-4 bg-white/95 backdrop-blur-sm rounded-none px-4 py-2.5 shadow-lg border border-white/25 flex items-center gap-2">
-                  <span className="text-lg">⭐</span>
-                  <span className="text-xs font-bold text-slate-900">
-                    Small Classes
-                  </span>
-                </div>
-
-                <div className="absolute top-1/2 -right-3 -translate-y-1/2 bg-white/95 backdrop-blur-sm rounded-none px-3.5 py-2.5 shadow-lg border border-white/25 flex items-center gap-2">
-                  <span className="text-lg">📚</span>
-                  <span className="text-xs font-bold text-slate-900">
-                    Recordings Included
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -220,8 +198,8 @@ export default function Hero({ onOpenModal }) {
       </div>
 
       {/* Decorative background elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-[#FBBF24]/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-10 right-10 w-60 h-60 bg-[#FBBF24]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-5 left-5 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl pointer-events-none"></div>
     </section>
   );
 }

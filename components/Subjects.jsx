@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionHeading from './ui/SectionHeading';
-import { FaCalculator, FaBookOpen, FaAtom } from 'react-icons/fa6';
+import { FaCalculator, FaBookOpen, FaAtom, FaLaptopCode } from 'react-icons/fa6';
 
 export default function Subjects() {
   const subjects = [
@@ -21,6 +21,12 @@ export default function Subjects() {
       title: "Science (Combined & Triple)",
       description: "Unlock the wonders of Biology, Chemistry, and Physics through engaging explanations, practical theory, and structured exam technique.",
       keyTopics: "Scientific inquiry, key experiments, core concepts, and exam question breakdown."
+    },
+    {
+      icon: FaLaptopCode,
+      title: "Computing & Coding",
+      description: "Develop fundamental digital literacy, computational thinking, and programming skills essential for modern academic success.",
+      keyTopics: "Algorithms, logic, coding fundamentals, digital safety, and problem solving."
     }
   ];
 
@@ -33,7 +39,7 @@ export default function Subjects() {
           subtitle="Expertly structured tuition tailored to key academic stages and examination boards."
         />
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {subjects.map((subj, index) => {
             const IconComponent = subj.icon;
             return (

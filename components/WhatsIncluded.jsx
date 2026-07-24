@@ -16,7 +16,7 @@ export default function WhatsIncluded() {
     },
     {
       icon: FaCircleCheck,
-      title: "Weekly Progress Assessments",
+      title: "End Of Program Report",
       description: "Regular formative checks to track understanding and ensure every child is keeping pace and mastering concepts."
     },
     {

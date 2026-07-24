@@ -11,6 +11,7 @@ export default function ApplicationModal({ isOpen, onClose }) {
     email: '',
     academicYear: '',
     subjects: [],
+    hours: '',
     parentName: '',
     phone: '',
     studentName: ''
@@ -21,24 +22,33 @@ export default function ApplicationModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const academicYears = [
-    "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Year 11 (GCSE)"
+    "Year 3", "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Year 11 (GCSE)", "Year 12", "A Levels"
   ];
 
   const availableSubjects = [
     "Mathematics",
     "English",
-    "Science"
+    "Science",
+    "Computing"
+  ];
+
+  const availableHours = [
+    { hours: 6, label: "6 Hours" },
+    { hours: 12, label: "12 Hours" },
+    { hours: 20, label: "20 Hours" }
   ];
 
   const questions = [
     { key: 'email', label: 'What is your email address?' },
     { key: 'academicYear', label: "What academic year is your child entering?" },
-    { key: 'subjects', label: 'Select subjects for the 6-week programme (£25 per session/subject):' },
+    { key: 'subjects', label: 'Select subjects for the 6-week programme:' },
+    { key: 'hours', label: 'Select your preferred number of hours:' },
     { key: 'parentName', label: "What is your full name (Parent/Guardian)?" },
     { key: 'phone', label: 'What is your phone number?' },
-   ];
+  ];
 
-  const totalPrice = formData.subjects.length * 25;
+  const numericHours = formData.hours ? Number(formData.hours) : 0;
+  const totalPrice = numericHours * 25;
 
   const handleSubjectToggle = (subject) => {
     let updatedSubjects;
@@ -57,6 +67,11 @@ export default function ApplicationModal({ isOpen, onClose }) {
     if (currentKey === 'subjects') {
       if (formData.subjects.length === 0) {
         setError('Please select at least one subject.');
+        return;
+      }
+    } else if (currentKey === 'hours') {
+      if (!formData.hours) {
+        setError('Please select your preferred number of hours.');
         return;
       }
     } else {
@@ -117,8 +132,8 @@ export default function ApplicationModal({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-sm animate-fadeIn overflow-y-auto">
-      <div className="bg-white w-full max-w-lg p-5 sm:p-8 rounded-none shadow-2xl border border-slate-200 relative my-auto max-h-[90vh] flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-sm animate-fadeIn overflow-y-auto">
+      <div className="bg-white w-full max-w-lg p-5 sm:p-8 rounded-none shadow-2xl border border-slate-200 relative my-auto max-h-[85vh] flex flex-col">
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 w-9 h-9 bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-all z-10"
@@ -186,13 +201,44 @@ export default function ApplicationModal({ isOpen, onClose }) {
                     );
                   })}
                 </div>
+              </div>
+            ) : questions[step].key === 'hours' ? (
+              <div className="space-y-3">
+                <div className="grid grid-cols-1 gap-2.5">
+                  {availableHours.map(item => {
+                    const isSelected = Number(formData.hours) === item.hours;
+                    return (
+                      <button
+                        key={item.hours}
+                        type="button"
+                        onClick={() => {
+                          setFormData({ ...formData, hours: String(item.hours) });
+                          if (error) setError('');
+                        }}
+                        className={`p-3.5 text-left border-2 rounded-none transition-all flex items-center justify-between font-bold text-sm ${
+                          isSelected 
+                            ? 'border-blue-600 bg-blue-50/50 text-slate-900 shadow-sm' 
+                            : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'
+                        }`}
+                      >
+                        <div>
+                          <span>{item.label}</span>
+                          <span className="block text-xs font-semibold text-slate-500 mt-0.5">£25 per hour session (custom schedule flexible)</span>
+                        </div>
+                        <div className={`w-5 h-5 border flex items-center justify-center shrink-0 ${isSelected ? 'bg-blue-600 border-blue-600 text-white' : 'border-slate-300'}`}>
+                          {isSelected && <FaCheck className="w-3 h-3" />}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
                 
                 <div className="bg-slate-50 p-3.5 border border-slate-200 flex items-center justify-between mt-3">
                   <div>
-                    <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wide">Selected: {formData.subjects.length}</p>
+                    <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wide">Selected Hours: {formData.hours || 0}</p>
                     <p className="text-base font-black text-slate-900">Total: £{totalPrice}</p>
                   </div>
-                  <p className="text-[11px] font-bold text-blue-700">£25 / session / subject</p>
+                  <p className="text-[11px] font-bold text-blue-700">£25 / session (1 hour)</p>
                 </div>
               </div>
             ) : (
