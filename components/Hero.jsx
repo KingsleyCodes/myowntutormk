@@ -184,13 +184,10 @@ export default function Hero({ onOpenModal }) {
                   src="/hero.webp"
                   alt="Expert UK Tutor Teaching Online"
                   fill
+                  sizes="(max-width: 768px) 100vw, 440px"
                   className="object-cover"
                   priority
                 />
-
-                
-                
-
               </div>
             </div>
           </div>

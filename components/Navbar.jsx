@@ -32,8 +32,9 @@ export default function Navbar({ onOpenModal }) {
           <div className="relative w-20 h-12 shrink-0 block md:hidden">
             <Image
               src="/logo.png"
-              alt=""
+              alt="Lambye Logo"
               fill
+              sizes="80px"
               className="object-contain"
               priority
             />
@@ -43,8 +44,9 @@ export default function Navbar({ onOpenModal }) {
           <div className="relative w-20 h-20 shrink-0 hidden md:block">
             <Image
               src="/logo.png"
-              alt=""
+              alt="Lambye Logo"
               fill
+              sizes="80px"
               className="object-contain"
               priority
             />

@@ -19,7 +19,7 @@ export default function ThankYouPage() {
         </h1>
         
         <p className="text-slate-600 font-semibold text-sm leading-relaxed mb-6">
-          Thank you for securing your child's place. We have received your details and someone from our team will call you shortly.
+          Thank you for securing your child's place. We have received your details and someone from our team will call soon
         </p>
 
         <div className="bg-slate-50 border border-slate-200 p-4 mb-8 flex items-center gap-3 text-left">
@@ -27,7 +27,7 @@ export default function ThankYouPage() {
             <FaPhoneVolume className="w-4 h-4 text-blue-700" />
           </div>
           <p className="text-xs font-bold text-slate-700 leading-tight">
-            Keep your phone nearby—our educational advisor will be in touch shortly to finalise your onboarding.
+            Keep your phone nearby—our educational advisor will be in touch to finalise your onboarding.
           </p>
         </div>
 
