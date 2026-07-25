@@ -175,8 +175,8 @@ export default function Hero({ onOpenModal }) {
             </div>
           </div>
 
-          {/* Right Content - Teacher Image / Card */}
-          <div className="hero-teacher relative flex justify-center lg:justify-end">
+          {/* Right Content - tutor Image / Card */}
+          <div className="hero-tutor relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[440px]">
               {/* Main Container - Sharp Edges */}
               <div className="aspect-[16/10] rounded-none bg-white/10 backdrop-blur-sm border border-white/20 shadow-2xl overflow-hidden relative flex items-center justify-center">

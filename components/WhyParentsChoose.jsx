@@ -6,7 +6,7 @@ export default function WhyParentsChoose() {
   const reasons = [
     {
       icon: FaUserCheck,
-      title: "Vetted UK Teachers",
+      title: "Vetted UK tutors",
       description: "Every tutor is thoroughly vetted, DBS checked, and experienced in delivering high-impact online education."
     },
     {

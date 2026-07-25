@@ -18,7 +18,7 @@ export default function FAQ() {
     },
     {
       question: "What happens if my child misses a live session?",
-      answer: "Sessions are recorded and made available securely to enrolled families so students can catch up at their convenience."
+      answer: "Missed sessions are rescheduled at your convenience."
     },
     {
       question: "How do I track my child's progress throughout the 6 weeks?",

@@ -22,7 +22,7 @@ export default function ApplicationModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const academicYears = [
-    "Year 3", "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Year 11 (GCSE)", "Year 12", "A Levels"
+    "Year 3", "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Year 11 (GCSE)", "Year 12"
   ];
 
   const availableSubjects = [

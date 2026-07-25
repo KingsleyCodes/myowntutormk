@@ -12,12 +12,12 @@ export default function GuaranteePromise() {
     {
       icon: FaUserCheck,
       title: "1-to-1 Dedicated Attention",
-      description: "Before we assign any tutor, we match your child 1-to-1 with a specialized teacher tailored entirely to their individual academic pace and learning style."
+      description: "Before we assign any tutor, we match your child 1-to-1 with a specialised tutor tailored entirely to their individual academic pace and learning style."
     },
     {
       icon: FaBan,
       title: "Zero Group Calls",
-      description: "No overcrowded classrooms or distracting group sessions. Every single session is strictly one child to one teacher for maximum focus and results."
+      description: "No overcrowded classrooms or distracting group sessions. Every single session is strictly one child to one tutor for maximum focus and results."
     }
   ];
 

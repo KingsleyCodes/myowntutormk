@@ -6,7 +6,7 @@ export default function Tutors() {
   const tutors = [
     {
       role: "Expert Mathematics Tutors",
-      bio: "Our mathematics educators specialize in transforming foundational arithmetic and complex problem-solving into complete academic confidence.",
+      bio: "Our mathematics educators specialise in transforming foundational arithmetic and complex problem-solving into complete academic confidence.",
       qualifications: "DBS Checked & Top-Tier University Graduates",
       subjectFocus: "Number fluency, algebra, geometry & exam techniques"
     },
@@ -19,7 +19,7 @@ export default function Tutors() {
     {
       role: "Expert Science Educators",
       bio: "Dynamic science specialists committed to making Biology, Chemistry, and Physics engaging, clear, and fully accessible for every student.",
-      qualifications: "DBS Checked & Specialized Science Instructors",
+      qualifications: "DBS Checked & Specialised Science Instructors",
       subjectFocus: "Scientific inquiry, core concepts & practical theory"
     },
     {
