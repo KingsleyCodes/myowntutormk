@@ -181,7 +181,7 @@ export default function Hero({ onOpenModal }) {
               {/* Main Container - Sharp Edges */}
               <div className="aspect-[16/10] rounded-none bg-white/10 backdrop-blur-sm border border-white/20 shadow-2xl overflow-hidden relative flex items-center justify-center">
                 <Image
-                  src="/hero.webp"
+                  src="/h1.webp"
                   alt="Expert UK Tutor Teaching Online"
                   fill
                   sizes="(max-width: 768px) 100vw, 440px"
