@@ -42,7 +42,7 @@ export default function ApplicationModal({ isOpen, onClose }) {
     { key: 'email', label: 'What is your email address?' },
     { key: 'academicYear', label: "What academic year is your child entering?" },
     { key: 'subjects', label: 'Select subjects for the 6-week programme:' },
-    { key: 'hours', label: 'Select your preferred number of hours:' },
+{ key: 'hours', label: "How many hours per week? (Fully flexible around your convenience)" },
     { key: 'parentName', label: "What is your full name (Parent/Guardian)?" },
     { key: 'phone', label: 'What is your phone number?' },
   ];
@@ -223,7 +223,7 @@ export default function ApplicationModal({ isOpen, onClose }) {
                       >
                         <div>
                           <span>{item.label}</span>
-                          <span className="block text-xs font-semibold text-slate-500 mt-0.5">£25 per hour session (custom schedule flexible)</span>
+                          <span className="block text-xs font-semibold text-slate-500 mt-0.5">£25 per hour or session (schedules are flixible)</span>
                         </div>
                         <div className={`w-5 h-5 border flex items-center justify-center shrink-0 ${isSelected ? 'bg-blue-600 border-blue-600 text-white' : 'border-slate-300'}`}>
                           {isSelected && <FaCheck className="w-3 h-3" />}
