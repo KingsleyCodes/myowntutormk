@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa6';
 
 export default function ThankYouPage() {
   const whatsappNumber = "+447577007223";
-  const whatsappMessage = encodeURIComponent("Hello, I have just submitted my application for the tutoring programme and would like to connect.");
+  const whatsappMessage = encodeURIComponent("Hello, I have just submitted my inquiry for the summer programme and would like to enroll my child.");
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
 
   return (
@@ -27,7 +27,7 @@ export default function ThankYouPage() {
             <FaPhoneVolume className="w-4 h-4 text-blue-700" />
           </div>
           <p className="text-xs font-bold text-slate-700 leading-tight">
-            Keep your phone nearby—our educational advisor will be in touch to finalise your onboarding.
+            Keep your phone nearby—our academic advisor will be in touch to finalise your child's enrollment.
           </p>
         </div>
 

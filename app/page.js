@@ -18,6 +18,7 @@ import StatCard from '@/components/ui/StatCard';
 import FeatureCard from '@/components/ui/FeatureCard';
 import TrustBar from '@/components/TrustBar';
 import GuaranteePromise from '@/components/GuaranteePromise';
+import CurriculumAlignment from '@/components/CurriculumAlignment';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,9 +35,10 @@ export default function Home() {
         <HowItWorks />
         <GuaranteePromise />
         <Testimonials />
+         <CurriculumAlignment />
         <WhyParentsChoose />
         <Tutors />
-        <FAQ />
+       <FAQ />
         <FinalCTA onOpenModal={() => setIsModalOpen(true)} />
       </div>
 

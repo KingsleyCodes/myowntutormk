@@ -11,19 +11,19 @@ export default function Tutors() {
       subjectFocus: "Number fluency, algebra, geometry & exam techniques"
     },
     {
-      role: "Expert English Specialists",
+      role: "Expert English Tutors",
       bio: "Dedicated professionals focused on elevating reading comprehension, creative writing flair, grammar precision, and analytical essay skills.",
       qualifications: "DBS Checked & Experienced English Educators",
       subjectFocus: "Creative writing, comprehension, grammar & literature"
     },
     {
       role: "Expert Science Educators",
-      bio: "Dynamic science specialists committed to making Biology, Chemistry, and Physics engaging, clear, and fully accessible for every student.",
+      bio: "Dynamic science Tutors committed to making Biology, Chemistry, and Physics engaging, clear, and fully accessible for every student.",
       qualifications: "DBS Checked & Specialised Science Instructors",
       subjectFocus: "Scientific inquiry, core concepts & practical theory"
     },
     {
-      role: "Expert Computing Specialists",
+      role: "Expert Computing Tutors",
       bio: "Forward-thinking technology mentors focused on developing digital literacy, computational thinking, and core programming foundations.",
       qualifications: "DBS Checked & Tech Industry Professionals",
       subjectFocus: "Algorithms, logic, coding fundamentals & safety"

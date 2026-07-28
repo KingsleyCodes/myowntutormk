@@ -42,7 +42,7 @@ export default function ApplicationModal({ isOpen, onClose }) {
     { key: 'email', label: 'What is your email address?' },
     { key: 'academicYear', label: "What academic year is your child entering?" },
     { key: 'subjects', label: 'Select subjects for the 6-week programme:' },
-{ key: 'hours', label: "How many hours per week? (Fully flexible around your convenience)" },
+{ key: 'hours', label: "Select the total number of sessions or hours your child needs for the program" },
     { key: 'parentName', label: "What is your full name (Parent/Guardian)?" },
     { key: 'phone', label: 'What is your phone number?' },
   ];
